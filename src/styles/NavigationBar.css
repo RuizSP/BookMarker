@@ -1,0 +1,38 @@
+.nav-container
+{
+    display: flex;
+    width: 100%;
+    height: 65px;
+    background-color: #1b1b1b;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation
+{
+    list-style: none;
+    display: flex;
+    flex-flow: row;
+    
+}
+
+.navigation-itens
+{
+    color: white;
+   
+    
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+.navigation-itens a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.searchbar
+{
+    width: 80%;
+    height: 30px;
+    font-size: 24px;
+}
