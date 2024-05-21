@@ -1,59 +1,65 @@
-import React from "react";
-import BtnSuccess from "../components/BtnSuccess";
-import "../styles/MyBooks.css";
-import BookItem from "../components/BookItem";
-
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import BtnSuccess from "../components/BtnSuccess";
+import BookItem from "../components/BookItem";
+import FilterBar from "../components/FilterBar";
+import "../styles/MyBooks.css";
 
-import filterIcon from "../images/9044379_filter_edit_icon.png"
-
-export default function MyBooks()
-{
+export default function MyBooks() {
     const [livros, setLivros] = useState([]);
-    useEffect(() =>{
-        async function fetchLivros(){
-            try{
+    const [currentBooks, setCurrentBooks] = useState([]);
+
+    useEffect(() => {
+        async function fetchLivros() {
+            try {
                 const response = await axios.get('http://localhost:5000/livros/');
                 setLivros(response.data);
-            }catch(error){
+                setCurrentBooks(response.data);
+            } catch (error) {
                 console.error("erro ao buscar livros", error);
             }
         }
         fetchLivros();
-    }, [])
+    }, []);
 
-    const handleDelete = (id) =>{
-        const updatedlivros = livros.filter(book =>book.id !== id);
-        setLivros(updatedlivros);
+    const handleDelete = (id) => {
+        const updatedLivros = livros.filter(book => book.id !== id);
+        setLivros(updatedLivros);
+        setCurrentBooks(updatedLivros);
     }
 
-    return(
+    const handleFilter = ({ value, type }) => {
+        if (value !== "") {
+            let filteredBooks = [];
+            if (type === "genero") {
+                filteredBooks = livros.filter(book => book.genero === value);
+            } else if (type === "autor") {
+                filteredBooks = livros.filter(book => book.autor === value);
+            } else if (type === "status") {
+                filteredBooks = livros.filter(book => book.statusConclusao === value);
+            }
+            setCurrentBooks(filteredBooks);
+        } else {
+            setCurrentBooks(livros);
+        }
+    }
+
+    return (
         <div>
             <div className="title">
-                <h1> Meus Livros</h1>
+                <h1>Meus Livros</h1>
             </div>
-            <div className="filter">
-                <img src={filterIcon}></img>
-                <p>Filtrar por:</p>
-                <select>
-                    <option value="noFilter">Sem filtros</option>
-                    <option value="autor"> autor</option>
-                    <option value="genero"> gênero </option>
-                    <option value= "status"> status</option>
-                </select>
-            </div>
+            <FilterBar books={livros} onFilter={handleFilter} />
             {livros.length <= 0 &&
-                <>
-                    <p>Nenhum livro cadastrado!</p>
-                </>
+                <p>Nenhum livro cadastrado!</p>
             }
-            {livros.map( book =>(<BookItem key={book.id} book={book} onDelete={handleDelete}/>))}
+            {currentBooks.map(book => (
+                <BookItem key={book.id} book={book} onDelete={handleDelete} />
+            ))}
             <Link to="/newbook">
-                <BtnSuccess text="Adicionar Livro" ></BtnSuccess>
+                <BtnSuccess text="Adicionar Livro" />
             </Link>
         </div>
-        
-    )
+    );
 }

@@ -1,3 +1,40 @@
 {
-  "livros": []
+  "livros": [
+    {
+      "id": "9362",
+      "titulo": "O código da vince",
+      "autor": "Dan Brown",
+      "genero": "Criminal",
+      "dataInicio": "",
+      "paginas": "560",
+      "paginaAtual": "",
+      "statusConclusao": "Não Iniciado",
+      "dataConclusao": "",
+      "imagemCapa": "https://images-na.ssl-images-amazon.com/images/I/710DjekSUkL._AC_UL232_SR232,232_.jpg"
+    },
+    {
+      "titulo": "Androides sonham com ovelhas Elétricas? (Blade Runner)",
+      "autor": "Phillip K Dick",
+      "genero": "Ficção Ciêntifica",
+      "dataInicio": "2023-06-05",
+      "paginas": "300",
+      "paginaAtual": "30",
+      "statusConclusao": "Em andamento",
+      "dataConclusao": "",
+      "imagemCapa": "",
+      "id": "5c99"
+    },
+    {
+      "id": "889e",
+      "titulo": "Drácula",
+      "autor": "Bram Stoker",
+      "genero": "Terror",
+      "dataInicio": "2024-02-12",
+      "paginas": "200",
+      "paginaAtual": "10",
+      "statusConclusao": "Em andamento",
+      "dataConclusao": "",
+      "imagemCapa": ""
+    }
+  ]
 }
