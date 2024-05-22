@@ -13,7 +13,7 @@
       "imagemCapa": "https://images-na.ssl-images-amazon.com/images/I/710DjekSUkL._AC_UL232_SR232,232_.jpg"
     },
     {
-      "titulo": "Androides sonham com ovelhas Elétricas? (Blade Runner)",
+      "titulo": "Androides sonham com ovelhas Elétricas? ",
       "autor": "Phillip K Dick",
       "genero": "Ficção Ciêntifica",
       "dataInicio": "2023-06-05",
@@ -21,7 +21,7 @@
       "paginaAtual": "30",
       "statusConclusao": "Em andamento",
       "dataConclusao": "",
-      "imagemCapa": "",
+      "imagemCapa": "https://m.media-amazon.com/images/I/61xuJwg9fiL._AC_UF1000,1000_QL80_.jpg",
       "id": "5c99"
     },
     {
@@ -35,6 +35,54 @@
       "statusConclusao": "Em andamento",
       "dataConclusao": "",
       "imagemCapa": ""
+    },
+    {
+      "titulo": "O homem do castelo alto",
+      "autor": "Phillip K Dick",
+      "genero": "Ficção Ciêntifica",
+      "dataInicio": "2024-04-02",
+      "paginas": "400",
+      "paginaAtual": "",
+      "statusConclusao": "Não Iniciado",
+      "dataConclusao": "",
+      "imagemCapa": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com.br%2FHomem-do-Castelo-Alto%2Fdp%2F8576574411&psig=AOvVaw3J9vt1lT7LyUICsbSD9Tpn&ust=1716477687938000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJih4OjHoYYDFQAAAAAdAAAAABAR",
+      "id": "7b52"
+    },
+    {
+      "id": "bb01",
+      "titulo": "O Senhor dos anéis",
+      "autor": "JRR Tolkien",
+      "genero": "Fantasia",
+      "dataInicio": "2023-02-20",
+      "paginas": "1268",
+      "paginaAtual": "600",
+      "statusConclusao": "Em andamento",
+      "dataConclusao": "",
+      "imagemCapa": ""
+    },
+    {
+      "id": "2d64",
+      "titulo": "O morto",
+      "autor": "ninguem",
+      "genero": "helicóptero de combate",
+      "dataInicio": "1648-03-02",
+      "paginas": "99999",
+      "paginaAtual": "",
+      "statusConclusao": "Não Iniciado",
+      "dataConclusao": "",
+      "imagemCapa": ""
+    },
+    {
+      "titulo": "As crõnicas de nárnia: livro 1",
+      "autor": "C.S Lewes",
+      "genero": "Fantasia",
+      "dataInicio": "1999-12-20",
+      "paginas": "1000",
+      "paginaAtual": "",
+      "statusConclusao": "Não Iniciado",
+      "dataConclusao": "",
+      "imagemCapa": "https://rollingstone.uol.com.br/media/uploads/2023/08/a1rg9jd7oyl.jpg",
+      "id": "6a48"
     }
   ]
 }

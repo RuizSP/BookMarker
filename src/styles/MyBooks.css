@@ -18,3 +18,10 @@
 .filter p{
     font-size: 12px;
 }
+
+.scrollable
+{
+    overflow-y:scroll;
+    box-sizing: border-box; 
+   
+}

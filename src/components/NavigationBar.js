@@ -6,7 +6,7 @@ export default function NavigationBar()
     return(
         <>
            <div className="nav-container">
-               
+               <h2> BookMark</h2>
                <ul className="navigation">
                    <li className="navigation-itens">
                       <Link to="/"> Home </Link>
@@ -15,9 +15,6 @@ export default function NavigationBar()
                        <Link to="mybooks">Meus Livros</Link>
                    </li>
                </ul>
-                <form  className="searchbar">
-                    <input  className="searchbar" type="text" placeholder="Pesquisar"></input>
-                </form>
         
            </div>
         </>

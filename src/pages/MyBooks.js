@@ -51,15 +51,18 @@ export default function MyBooks() {
                 <h1>Meus Livros</h1>
             </div>
             <FilterBar books={livros} onFilter={handleFilter} />
-            {livros.length <= 0 &&
-                <p>Nenhum livro cadastrado!</p>
-            }
-            {currentBooks.map(book => (
-                <BookItem key={book.id} book={book} onDelete={handleDelete} />
-            ))}
             <Link to="/newbook">
                 <BtnSuccess text="Adicionar Livro" />
             </Link>
+            {livros.length <= 0 &&
+                <p>Nenhum livro cadastrado!</p>
+            }
+           <div className="scrollable">
+                {currentBooks.map(book => (
+                        <BookItem key={book.id} book={book} onDelete={handleDelete} />
+                ))}
+           </div>
+
         </div>
     );
 }

@@ -4,7 +4,7 @@ import editicon from "../images/8725775_edit_icon.png";
 import deleteIcon from "../images/1312512_circle_delete_style_trash_remove_icon.png";
 import { useState } from "react";
 import axios from "axios";
-import NewBook from "../pages/NewBook";
+import NewBook from "./BookForm";
 import BookContents from "./BookContents";
 
 export default function BookItem({ book, onDelete }) {
